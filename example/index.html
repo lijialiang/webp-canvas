@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> WebP Canvas Example </title>
+</head>
+<body>
+
+    <canvas id="canvas"></canvas>
+
+    <script src="../dist/webp-canvas.min.js"></script>
+
+    <script>
+        WebPCanvas.config( '../dist/webp-canvas.worker.min.js' );
+
+        var webpCanvas = new WebPCanvas({
+            canvas: '#canvas',
+            webp: '1.webp',
+            mounted: function () {
+                webpCanvas.play();
+            },
+        });
+    </script>
+
+</body>
+</html>
